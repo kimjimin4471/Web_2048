@@ -8,5 +8,9 @@ body {
     width: 200px;
     float: left;
     height: 202px;
+    display: flex;
     border: 1px solid;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
 }
