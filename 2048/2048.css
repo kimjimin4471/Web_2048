@@ -1,0 +1,12 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cell {
+    width: 200px;
+    float: left;
+    height: 202px;
+    border: 1px solid;
+}
