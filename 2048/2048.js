@@ -140,6 +140,7 @@ function moveLeft() {
     for(let i = 1; i < 5; i++) {
         for(let j = 1; j < 4; j++) {
             if(board[i][j] == board[i][j+1] && board[i][j] != 0) {
+                numCheck = 0;
                 score += board[i][j];
                 board[i][j] *= 2;
                 board[i][j+1] = 0;
@@ -186,6 +187,7 @@ function moveUp() {
                 score += board[j][i];
                 board[j][i] *= 2;
                 board[j+1][i] = 0;
+                numCheck = 0;
             }
         }
     }
@@ -229,6 +231,7 @@ function moveRight() {
                 score += board[i][j];
                 board[i][j] *= 2;
                 board[i][j-1] = 0;
+                numCheck = 0;
             }
         }
     }
@@ -272,6 +275,7 @@ function moveDown(){
                 score += board[j][i];
                 board[j][i] *= 2;
                 board[j-1][i] = 0;
+                numCheck = 0;
             }
         }
     }
@@ -315,7 +319,7 @@ function gameOver() {
     rowCheck();
     columnCheck();
     if(fullCheck && overCheck) {
-        alert("Gameover");
+        alert("Gameover\n" + "Score : " + score);
         window.location.reload();
     }
 
